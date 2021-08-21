@@ -125,8 +125,6 @@ Public Class DtablaRMA
             Else
                 Return False
             End If
-
-
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
@@ -142,7 +140,7 @@ Public Class DtablaRMA
         Try
             'Establecemos la conexión con la base de datos
             conectar()
-            Dim sql As String = "SELECT * FROM RMA"
+            Dim sql As String = "SELECT * FROM RMA WHERE centrada=7"
 
             cmd = New OleDbCommand(sql, conect)
             MsgBox("Estoy en DtablaRMA")

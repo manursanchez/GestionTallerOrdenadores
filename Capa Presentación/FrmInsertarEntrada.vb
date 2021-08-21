@@ -1,8 +1,9 @@
 ﻿Public Class FrmInsertarEntrada
     Private Sub btnInsertarEntrada_Click(sender As Object, e As EventArgs) Handles btnInsertarEntrada.Click
         Try
-            Dim lc As New LtablaRMA()
-            lc.insertarEntrada(TextFechaEntrada.Text, TextNombre.Text, TextDireccion.Text, TextTelefono.Text, TextCorreoE.Text, RichTextDescripcion.Text, RichTextObservaciones.Text)
+            'creamos objeto de la capa lógica para peticin de datos
+            Dim lrma As New LtablaRMA()
+            lrma.insertarEntrada(TextFechaEntrada.Text, TextNombre.Text, TextDireccion.Text, TextTelefono.Text, TextCorreoE.Text, RichTextDescripcion.Text, RichTextObservaciones.Text)
             limpiarCampos()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -17,5 +18,6 @@
         RichTextDescripcion.Clear()
         RichTextObservaciones.Clear()
     End Sub
+
 
 End Class
