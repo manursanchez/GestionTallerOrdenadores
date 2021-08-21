@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form4
+Partial Class FrmListado
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,13 +24,13 @@ Partial Class Form4
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Form4
+        'FrmListado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Name = "Form4"
-        Me.Text = "Consultas"
+        Me.Name = "FrmListado"
+        Me.Text = "Listar Entradas"
         Me.ResumeLayout(False)
 
     End Sub

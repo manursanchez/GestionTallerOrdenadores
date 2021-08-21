@@ -9,4 +9,13 @@ Public Class LtablaRMA
             Return False
         End If
     End Function
+
+    Public Function recuperarEntrada()
+        Dim objetoDatosTablaRMA As New DtablaRMA()
+        If objetoDatosTablaRMA.recuperarEntrada(objetoDatosTablaRMA) = True Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

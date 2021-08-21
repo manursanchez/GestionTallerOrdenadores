@@ -108,7 +108,7 @@ Public Class DtablaRMA
     End Property
 
 
-    'Función para grabar una entrada de un dispositivo en taller
+    'Función para grabar una entrada de un dispositivo que ha entrado en el taller
     Public Function insertarEntrada(dRMA As DtablaRMA) As Boolean
         Try
             'Establecemos la conexión con la base de datos
@@ -137,5 +137,29 @@ Public Class DtablaRMA
 
     End Function
 
+    'Función para recuperar información de la tabla a partir de un código de registro 
+    Public Function recuperarEntrada(dRMA As DtablaRMA) As Boolean
+        Try
+            'Establecemos la conexión con la base de datos
+            conectar()
+            Dim sql As String = "SELECT * FROM RMA"
+
+            cmd = New OleDbCommand(sql, conect)
+            MsgBox("Estoy en DtablaRMA")
+            If cmd.ExecuteNonQuery() Then
+                MsgBox("He recuperado el registro: " + cmd.ExecuteNonQuery)
+                Return True
+            Else
+                MsgBox("No he hecho nada")
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            desconectar()
+
+        End Try
+    End Function
 
 End Class

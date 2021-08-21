@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class FrmCambiaEntrada
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,13 +24,13 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Form3
+        'FrmCambiaEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Name = "Form3"
-        Me.Text = "Salidas"
+        Me.Name = "FrmCambiaEntrada"
+        Me.Text = "Modificar entrada"
         Me.ResumeLayout(False)
 
     End Sub

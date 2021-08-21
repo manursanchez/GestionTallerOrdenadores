@@ -78,11 +78,17 @@
     <Compile Include="Capa Datos\Conexion.vb" />
     <Compile Include="Capa Datos\DtablaRMA.vb" />
     <Compile Include="Capa Lógica\LtablaRMA.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="Capa Presentación\FrmListado.Designer.vb">
+      <DependentUpon>FrmListado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Capa Presentación\FrmListado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Capa Presentación\FrmInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Presentación\FrmInicio.Designer.vb">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Capa Presentación\FrmInsertarEntrada.Designer.vb">
@@ -91,22 +97,22 @@
     <Compile Include="Capa Presentación\FrmInsertarEntrada.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="Capa Presentación\FrmRecuperaEntrada.Designer.vb">
+      <DependentUpon>FrmRecuperaEntrada.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="Capa Presentación\FrmRecuperaEntrada.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <Compile Include="Capa Presentación\FrmCambiaEntrada.Designer.vb">
+      <DependentUpon>FrmCambiaEntrada.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form4.vb">
+    <Compile Include="Capa Presentación\FrmCambiaEntrada.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.vb">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <Compile Include="Capa Presentación\FrmSalida.Designer.vb">
+      <DependentUpon>FrmSalida.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form5.vb">
+    <Compile Include="Capa Presentación\FrmSalida.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -131,20 +137,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Capa Presentación\FrmListado.resx">
+      <DependentUpon>FrmListado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa Presentación\FrmInicio.resx">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Presentación\FrmInsertarEntrada.resx">
       <DependentUpon>FrmInsertarEntrada.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="Capa Presentación\FrmRecuperaEntrada.resx">
+      <DependentUpon>FrmRecuperaEntrada.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <EmbeddedResource Include="Capa Presentación\FrmCambiaEntrada.resx">
+      <DependentUpon>FrmCambiaEntrada.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <EmbeddedResource Include="Capa Presentación\FrmSalida.resx">
+      <DependentUpon>FrmSalida.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form5
+Partial Class FrmRecuperaEntrada
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,16 +22,29 @@ Partial Class Form5
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.BtnConsulta = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Form5
+        'BtnConsulta
+        '
+        Me.BtnConsulta.Location = New System.Drawing.Point(326, 141)
+        Me.BtnConsulta.Name = "BtnConsulta"
+        Me.BtnConsulta.Size = New System.Drawing.Size(196, 74)
+        Me.BtnConsulta.TabIndex = 0
+        Me.BtnConsulta.Text = "Pulsa aquí para buscar"
+        Me.BtnConsulta.UseVisualStyleBackColor = True
+        '
+        'FrmRecuperaEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Name = "Form5"
-        Me.Text = "Listados"
+        Me.Controls.Add(Me.BtnConsulta)
+        Me.Name = "FrmRecuperaEntrada"
+        Me.Text = "Consulta de entrada"
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents BtnConsulta As Button
 End Class

@@ -1,7 +1,6 @@
 ﻿Public Class FrmInsertarEntrada
     Private Sub btnInsertarEntrada_Click(sender As Object, e As EventArgs) Handles btnInsertarEntrada.Click
         Try
-            If 
             Dim lc As New LtablaRMA()
             lc.insertarEntrada(TextFechaEntrada.Text, TextNombre.Text, TextDireccion.Text, TextTelefono.Text, TextCorreoE.Text, RichTextDescripcion.Text, RichTextObservaciones.Text)
             limpiarCampos()
