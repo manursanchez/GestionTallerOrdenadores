@@ -5,12 +5,12 @@
             Dim lrma As New LtablaRMA()
             ' Initialize the random-number generator.
             Randomize()
-            ' Generate random value between 1 and 6.
-            Dim codigoEntrada As Integer = CInt(Int((6 * Rnd()) + 1))
+            ' Generate random value between 1 and 1000.
+            Dim codigoEntrada As Integer = CInt(Int((1000 * Rnd()) + 1))
             lrma.insertarEntrada(codigoEntrada, TextFechaEntrada.Text, TextNombre.Text, TextDireccion.Text, TextTelefono.Text, TextCorreoE.Text, RichTextDescripcion.Text, RichTextObservaciones.Text)
             limpiarCampos()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Error en inserción de registro: " + ex.Message)
         End Try
     End Sub
     Public Sub limpiarCampos()
