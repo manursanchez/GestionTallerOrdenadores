@@ -23,7 +23,6 @@ Partial Class FrmRecuperaEntrada
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRecuperaEntrada))
         Me.BtnConsulta = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -31,23 +30,25 @@ Partial Class FrmRecuperaEntrada
         Me.RMABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RMATableAdapter = New RMA2021.RMADataSetTableAdapters.RMATableAdapter()
         Me.TableAdapterManager = New RMA2021.RMADataSetTableAdapters.TableAdapterManager()
-        Me.RMABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.RMABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
         CType(Me.RMADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RMABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RMABindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RMABindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
         'BtnConsulta
@@ -97,124 +98,173 @@ Partial Class FrmRecuperaEntrada
         Me.TableAdapterManager.RMATableAdapter = Me.RMATableAdapter
         Me.TableAdapterManager.UpdateOrder = RMA2021.RMADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'RMABindingNavigator
+        'Label2
         '
-        Me.RMABindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.RMABindingNavigator.BindingSource = Me.RMABindingSource
-        Me.RMABindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.RMABindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.RMABindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.RMABindingNavigatorSaveItem})
-        Me.RMABindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.RMABindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.RMABindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.RMABindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.RMABindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.RMABindingNavigator.Name = "RMABindingNavigator"
-        Me.RMABindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.RMABindingNavigator.Size = New System.Drawing.Size(557, 25)
-        Me.RMABindingNavigator.TabIndex = 3
-        Me.RMABindingNavigator.Text = "BindingNavigator1"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(50, 90)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(91, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Fecha de entrada"
         '
-        'BindingNavigatorAddNewItem
+        'TextBox2
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(220, 83)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 5
         '
-        'BindingNavigatorCountItem
+        'TextBox3
         '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(222, 122)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(246, 20)
+        Me.TextBox3.TabIndex = 7
         '
-        'BindingNavigatorDeleteItem
+        'Label3
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(50, 129)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Nombre"
         '
-        'BindingNavigatorMoveFirstItem
+        'TextBox6
         '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(222, 151)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(246, 20)
+        Me.TextBox6.TabIndex = 13
         '
-        'BindingNavigatorMovePreviousItem
+        'Label6
         '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(50, 155)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Dirección"
         '
-        'BindingNavigatorSeparator
+        'TextBox7
         '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(222, 180)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox7.TabIndex = 15
         '
-        'BindingNavigatorPositionItem
+        'Label7
         '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(49, 185)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(49, 13)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Teléfono"
         '
-        'BindingNavigatorSeparator1
+        'TextBox8
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(223, 209)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(96, 20)
+        Me.TextBox8.TabIndex = 17
         '
-        'BindingNavigatorMoveNextItem
+        'Label8
         '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(49, 216)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(93, 13)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Correo electrónico"
         '
-        'BindingNavigatorMoveLastItem
+        'Label4
         '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(541, 47)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(51, 13)
+        Me.Label4.TabIndex = 18
+        Me.Label4.Text = "Problema"
         '
-        'BindingNavigatorSeparator2
+        'Label5
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(544, 171)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(48, 13)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Solución"
         '
-        'RMABindingNavigatorSaveItem
+        'Label9
         '
-        Me.RMABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.RMABindingNavigatorSaveItem.Image = CType(resources.GetObject("RMABindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.RMABindingNavigatorSaveItem.Name = "RMABindingNavigatorSaveItem"
-        Me.RMABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.RMABindingNavigatorSaveItem.Text = "Guardar datos"
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(514, 117)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(78, 13)
+        Me.Label9.TabIndex = 22
+        Me.Label9.Text = "Observaciones"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(376, 245)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(189, 40)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Cerrar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Location = New System.Drawing.Point(611, 44)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(262, 20)
+        Me.TextBox4.TabIndex = 25
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.Location = New System.Drawing.Point(611, 180)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(262, 20)
+        Me.TextBox5.TabIndex = 26
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(611, 110)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(262, 20)
+        Me.TextBox9.TabIndex = 27
         '
         'FrmRecuperaEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(557, 274)
-        Me.Controls.Add(Me.RMABindingNavigator)
+        Me.ClientSize = New System.Drawing.Size(906, 306)
+        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnConsulta)
@@ -222,9 +272,6 @@ Partial Class FrmRecuperaEntrada
         Me.Text = "Consulta de entrada"
         CType(Me.RMADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RMABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RMABindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RMABindingNavigator.ResumeLayout(False)
-        Me.RMABindingNavigator.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -237,17 +284,21 @@ Partial Class FrmRecuperaEntrada
     Friend WithEvents RMABindingSource As BindingSource
     Friend WithEvents RMATableAdapter As RMADataSetTableAdapters.RMATableAdapter
     Friend WithEvents TableAdapterManager As RMADataSetTableAdapters.TableAdapterManager
-    Friend WithEvents RMABindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents RMABindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox9 As TextBox
 End Class

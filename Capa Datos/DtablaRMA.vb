@@ -7,7 +7,7 @@ Public Class DtablaRMA
     'Private fechasalida As Date
     Private Nombre As String
     Private direccion As String
-    Private telefono As Integer
+    Private telefono As String
     'Private movil As Integer
     Private email As String
     Private problema As String
@@ -20,8 +20,9 @@ Public Class DtablaRMA
 
 
     'Constructor
-    Public Sub New(fecha_entrada As Date, nom As String, direc As String, tlf As Integer, correo_e As String, problem As String,
+    Public Sub New(codentrada As Integer, fecha_entrada As Date, nom As String, direc As String, tlf As String, correo_e As String, problem As String,
                    comentarios As String)
+        centrada = codentrada
         fechaentrada = fecha_entrada
         Nombre = nom
         direccion = direc
@@ -74,11 +75,11 @@ Public Class DtablaRMA
         End Set
     End Property
 
-    Public Property TelefonoCliente As Integer
+    Public Property TelefonoCliente As String
         Get
             Return telefono
         End Get
-        Set(value As Integer)
+        Set(value As String)
             telefono = value
         End Set
     End Property
@@ -116,7 +117,7 @@ Public Class DtablaRMA
             'Establecemos la conexión con la base de datos
             conectar()
             Dim sql As String =
-            "INSERT INTO RMA(fechaentrada,Nombre,direccion,telefono,email,problema,observaciones)VALUES('" & dRMA.FechaDeEntrada & "','" & dRMA.NombreCliente & "',' 
+            "INSERT INTO RMA(centrada,fechaentrada,Nombre,direccion,telefono,email,problema,observaciones)VALUES('" & dRMA.CodigoEntrada & "','" & dRMA.FechaDeEntrada & "','" & dRMA.NombreCliente & "',' 
             " & dRMA.DireccionCliente & "','" & dRMA.TelefonoCliente & "','" & dRMA.EmailCliente & "','" & dRMA.DescripcionProblema & "','" & dRMA.ObservacionesUsuario & "')"
 
             cmd = New OleDbCommand(sql, conect)
@@ -148,15 +149,15 @@ Public Class DtablaRMA
             registroLeido = cmd.ExecuteReader()
             If registroLeido.HasRows Then
                 While registroLeido.Read()
-                    MsgBox(registroLeido(0).ToString + " " + registroLeido(1).ToString + " " + registroLeido(2).ToString + " " + registroLeido(3).ToString)
-                    dRMA.CodigoEntrada = registroLeido(0).ToString
-                    dRMA.FechaDeEntrada = registroLeido(1).ToString
-                    dRMA.Nombre = registroLeido(2).ToString
-                    dRMA.DireccionCliente = registroLeido(3).ToString
-                    dRMA.TelefonoCliente = registroLeido(4).ToString
-                    dRMA.EmailCliente = registroLeido(5).ToString
-                    dRMA.DescripcionProblema = registroLeido(6).ToString
-                    dRMA.ObservacionesUsuario = registroLeido(7).ToString
+                    'MsgBox(registroLeido(0).ToString + " " + registroLeido(1).ToString + " " + registroLeido(2).ToString + " " + registroLeido(3).ToString + " " + registroLeido(4).ToString + " " + registroLeido(5).ToString + " " + registroLeido(6).ToString + " " + registroLeido(7).ToString)
+                    dRMA.CodigoEntrada = registroLeido(0)
+                    dRMA.FechaDeEntrada = registroLeido(1)
+                    dRMA.Nombre = registroLeido(3).ToString
+                    dRMA.DireccionCliente = registroLeido(4)
+                    dRMA.TelefonoCliente = registroLeido(5)
+                    dRMA.EmailCliente = registroLeido(7)
+                    dRMA.DescripcionProblema = registroLeido(8)
+                    dRMA.ObservacionesUsuario = registroLeido(10)
                 End While
 
                 Return True
@@ -165,7 +166,7 @@ Public Class DtablaRMA
                 Return False
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Error en datos: " + ex.Message)
             Return False
         Finally
             desconectar()
