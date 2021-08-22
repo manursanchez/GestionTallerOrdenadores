@@ -30,6 +30,9 @@ Public Class DtablaRMA
         problema = problem
         observaciones = comentarios
     End Sub
+    Public Sub New(codigoEntrada As Integer)
+        centrada = codigoEntrada
+    End Sub
     'Constructor vacío
     Public Sub New()
 
@@ -107,7 +110,6 @@ Public Class DtablaRMA
         End Set
     End Property
 
-
     'Función para grabar una entrada de un dispositivo que ha entrado en el taller
     Public Function insertarEntrada(dRMA As DtablaRMA) As Boolean
         Try
@@ -140,15 +142,26 @@ Public Class DtablaRMA
         Try
             'Establecemos la conexión con la base de datos
             conectar()
-            Dim sql As String = "SELECT * FROM RMA WHERE centrada=7"
-
+            Dim sql As String = "SELECT * FROM RMA WHERE centrada=" + Str(dRMA.CodigoEntrada)
+            Dim registroLeido As OleDbDataReader
             cmd = New OleDbCommand(sql, conect)
-            MsgBox("Estoy en DtablaRMA")
-            If cmd.ExecuteNonQuery() Then
-                MsgBox("He recuperado el registro: " + cmd.ExecuteNonQuery)
+            registroLeido = cmd.ExecuteReader()
+            If registroLeido.HasRows Then
+                While registroLeido.Read()
+                    MsgBox(registroLeido(0).ToString + " " + registroLeido(1).ToString + " " + registroLeido(2).ToString + " " + registroLeido(3).ToString)
+                    dRMA.CodigoEntrada = registroLeido(0).ToString
+                    dRMA.FechaDeEntrada = registroLeido(1).ToString
+                    dRMA.Nombre = registroLeido(2).ToString
+                    dRMA.DireccionCliente = registroLeido(3).ToString
+                    dRMA.TelefonoCliente = registroLeido(4).ToString
+                    dRMA.EmailCliente = registroLeido(5).ToString
+                    dRMA.DescripcionProblema = registroLeido(6).ToString
+                    dRMA.ObservacionesUsuario = registroLeido(7).ToString
+                End While
+
                 Return True
             Else
-                MsgBox("No he hecho nada")
+                MsgBox("No existen registros para el código de entrada proporcionado.")
                 Return False
             End If
         Catch ex As Exception
